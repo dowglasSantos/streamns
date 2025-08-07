@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class colletPessoa {
+public class ColletPessoa {
     public static void main(String[] args) {
         System.out.println("Usando Collect");
 
