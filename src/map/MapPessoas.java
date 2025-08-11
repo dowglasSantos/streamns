@@ -1,6 +1,6 @@
 package map;
 
-import forEach.Pessoa;
+import count.Pessoa;
 
 import java.util.List;
 import java.util.stream.Stream;

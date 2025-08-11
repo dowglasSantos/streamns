@@ -1,7 +1,8 @@
 package forEach;
 
+import count.Pessoa;
+
 import java.util.List;
-import java.util.stream.Stream;
 
 public class ForEachPessoa {
     public static void main(String[] args) {

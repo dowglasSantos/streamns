@@ -1,4 +1,4 @@
-package collect;
+package count;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -17,10 +17,6 @@ public class Pessoa {
         this.name = name;
         this.idade = idade;
         this.premium = premium;
-    }
-
-    public Pessoa(Pessoa pessoa) {
-        this(pessoa.getId(), pessoa.getName(), pessoa.getIdade(), pessoa.getPremium());
     }
 
     public void setId(String id) {

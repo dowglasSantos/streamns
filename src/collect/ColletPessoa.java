@@ -8,19 +8,28 @@ public class ColletPessoa {
     public static void main(String[] args) {
         System.out.println("Usando Collect");
 
-        Pessoa lista = new Pessoa();
+        List<Pessoa> lista = new Pessoa().listaDePessoas();
 
-        Map<String, List<Pessoa>> collectStream = lista.listaDePessoas().stream()
-                .collect(Collectors.groupingBy(p -> p.getPremium() ? "sim" : "não"));
-        for(Pessoa p : collectStream.get("sim")) {
-            System.out.println("Clientes Premium: " + p);
-        }
+        // Retorna uma lista com base em outra
 
-        System.out.println(" ");
+        List<Pessoa> listaDeClientesPremium = lista.stream()
+                .filter(n -> n.getPremium().equals(true))
+                .collect(Collectors.toList());
+        listaDeClientesPremium.forEach(System.out::println);
 
-        for(Pessoa p : collectStream.get("não")) {
-            System.out.println("Clientes Free: " + p);
-        }
+        System.out.println("*******************");
+        System.out.println("*******************");
 
+        List<Pessoa> listaDeClientesFree = lista.stream()
+                .filter(n -> n.getPremium().equals(false))
+                .collect(Collectors.toList());
+        listaDeClientesFree.forEach(System.out::println);
+
+        System.out.println("*******************");
+        System.out.println("*******************");
+
+        Map<String, Pessoa> createMapList = lista.stream()
+                .collect(Collectors.toMap(Pessoa::getId, Pessoa::new));
+        createMapList.forEach((k, v) -> System.out.println(k + " / " + v));
     }
 }

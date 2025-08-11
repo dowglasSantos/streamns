@@ -1,4 +1,4 @@
-package collect;
+package allmatch;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -17,10 +17,6 @@ public class Pessoa {
         this.name = name;
         this.idade = idade;
         this.premium = premium;
-    }
-
-    public Pessoa(Pessoa pessoa) {
-        this(pessoa.getId(), pessoa.getName(), pessoa.getIdade(), pessoa.getPremium());
     }
 
     public void setId(String id) {
@@ -60,10 +56,10 @@ public class Pessoa {
     public List<Pessoa> listaDePessoas() {
         Pessoa pessoa1 = new Pessoa(UUID.randomUUID().toString(), "Dowglas", 23, true);
         Pessoa pessoa2 = new Pessoa(UUID.randomUUID().toString(), "Danielly", 22, true);
-        Pessoa pessoa3 = new Pessoa(UUID.randomUUID().toString(), "Flavinho do Pneu", 999, false);
+        Pessoa pessoa3 = new Pessoa(UUID.randomUUID().toString(), "Flavinho do Pneu", 999, true);
         Pessoa pessoa4 = new Pessoa(UUID.randomUUID().toString(), "Xaulin Matador de porco", 55, true);
-        Pessoa pessoa5 = new Pessoa(UUID.randomUUID().toString(), "Jeferson Caminhões", 16, false);
-        Pessoa pessoa6 = new Pessoa(UUID.randomUUID().toString(), "Gabriel do Matagal", 28, false);
+        Pessoa pessoa5 = new Pessoa(UUID.randomUUID().toString(), "Jeferson Caminhões", 16, true);
+        Pessoa pessoa6 = new Pessoa(UUID.randomUUID().toString(), "Gabriel do Matagal", 28, true);
         lista.add(pessoa1);
         lista.add(pessoa2);
         lista.add(pessoa3);
